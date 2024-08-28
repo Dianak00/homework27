@@ -1,0 +1,15 @@
+let message = ['Learning', 'is', 'not', 'about', 'what', 'you', 'get', 'easily', 'the', 'first', 'time,', 'it', 'is', 'about', 'what', 'you', 'can', 'figure', 'out.', '-2015,', 'Chris', 'Pine,', 'Learn', 'JavaScript'];
+//console.log(message.length);
+message.pop('Javascript');
+//console.log(message.length);
+message.push('to', 'Program');
+//console.log(message.length);
+message.splice(7,1, 'right');
+//console.log(message);
+message.shift('');
+//console.log(message);
+message.unshift('Programmning');
+//console.log(message);
+message.splice(6, 5, 'know');
+//console.log(message);
+console.log(message.join(' '));
