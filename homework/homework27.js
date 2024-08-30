@@ -37,8 +37,54 @@ while (true){
     if(isNaN(num)){
         console.log('invalid input, enter an integer.');
     } else if (num % 2 === 0){
-        console.log(num + 'este par');
+        console.log(num + ' este par');
     } else {
-        console.log(num + 'este impar');
+        console.log(num + ' este impar');
     }
 }
+
+/*Exercitiul 3 - Căutarea unui element într-un array. Creați un 
+program care caută un element într-un array folosind un ciclu while.
+Programul ar trebui să afișeze poziția la care a fost găsit elementul
+sau un mesaj care spune că elementul nu a fost găsit.*/
+const array = [1, 2, 3, 4, 5];
+const elementCautat = Number(prompt('Ce numar vrei sa cauti?'));
+let gasit = false;
+let i = 0;
+while(i < array.length && !gasit){
+    if (array[i] === elementCautat){
+        console.log(`Elementul ${elementCautat} a fost gasit la pozitia ${i}`);
+        gasit = true;
+    }
+    i++;
+}
+if (!gasit){
+    console.log(`Elementul nu a fost gasit`);
+}
+
+//Exercitiul: Ana's calculator v.3
+const facturi = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+
+function calcTip(bonul){
+   return bonul >= 50 && bonul <= 300 ? bonul * 20/100 : bonul * 15/100;
+}
+
+for (let i = 0; i < facturi.length; i++){
+    const tip = calcTip(facturi[i]);
+    tips.push(tip);
+    totals.push(tip + facturi[i]);
+}
+//console.log(tips);
+//console.log(totals);
+
+function calcAverage(arr){
+    let suma = 0;
+    for (let i = 0; i < arr.length; i++){
+        suma += arr[i];
+    }
+    return suma;
+}
+const mediaTotala = calcAverage(totals);
+console.log(`Media totala este ${mediaTotala}`);
